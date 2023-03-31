@@ -39,7 +39,7 @@ GarageArea = st.number_input('Insert the garage area')
 df_data = np.array([LotArea, OverallQual, TotalBsmtSF, GrLivArea, TotRmsAbvGrd, GarageArea]).reshape(1, -1)
 df_data = pd.DataFrame(df_data, columns=col)
 
-if st.button('Predict price'):
+if st.checkbox('Predict price'):
     # Pipeline
 
     # for numerical_cols, all in category_cols1's situation
@@ -61,7 +61,7 @@ if st.button('Predict price'):
     prediction = pipeline.predict(df_data)
 
     st.subheader('Prediction')
-    st.caption('Le prix prédit de la maison est de', prediction)
+    st.write('Le prix prédit de la maison est de', prediction)
 
     if st.button('Show shap values'):
         # SHAP VALUE
