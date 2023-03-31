@@ -61,7 +61,8 @@ if st.checkbox('Predict price'):
     prediction = pipeline.predict(df_data)
 
     st.subheader('Prediction')
-    st.write('Le prix prédit de la maison est de', prediction)
+    st.write('The predicted price for this house is', str(prediction[0]), 'dollars.')
+    st.write('The prediction can  ')
 
     if st.button('Show shap values'):
         # SHAP VALUE
