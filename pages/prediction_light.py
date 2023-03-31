@@ -61,7 +61,7 @@ if st.button('Predict price'):
     prediction = pipeline.predict(df_data)
 
     st.subheader('Prediction')
-    st.st.caption('Le prix prédit de la maison est de', prediction)
+    st.caption('Le prix prédit de la maison est de', prediction)
 
     if st.button('Show shap values'):
         # SHAP VALUE
